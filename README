@@ -5,4 +5,4 @@ Gettings started helps developer to set up the developing environment step-by-st
 
 Step 1 - intialize the environment
  - Get BSD source code from the main stream.
- $ source ./envsetup.sh
+ $ ./envsetup.sh
