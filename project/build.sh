@@ -18,12 +18,12 @@ KERNCONF=GENERIC
 
 cd ${SRCDIR}
 
-make -j ${JFLAG} buildworld \
+make -j ${JFLAG} -DNO_CLEAN buildworld \
         TARGET=${TARGET} \
         TARGET_ARCH=${TARGET_ARCH} \
         __MAKE_CONF=${MAKECONF} \
         SRCCONF=${SRCCONF}
-make -j ${JFLAG} buildkernel \
+make -j ${JFLAG} -DNO_CLEAN buildkernel \
         TARGET=${TARGET} \
         TARGET_ARCH=${TARGET_ARCH} \
         KERNCONF=${KERNCONF} \
