@@ -1,3 +1,3 @@
-#!/usr/local/bin/bash
+#!/bin/sh
 
 svn co svn://svn.freebsd.org/base/head freebsd
