@@ -58,6 +58,7 @@ int main(int argc, char *argv[])
     }
 
     TCALL(pow);
+    /*
     TCALL(hypot);
     TCALL(exp);
     TCALL(log);
@@ -69,6 +70,7 @@ int main(int argc, char *argv[])
     TCALL(acos);
     TCALL(atan);
     TCALL(atan2);
+    */
 
     return 0;
 }
