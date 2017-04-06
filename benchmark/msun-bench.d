@@ -9,6 +9,6 @@ pid$target:msun-bench:test_pow:entry
 
 pid$target:msun-bench:test_pow:return /self->vts/
 {
-	printf("%lu us used\n", vtimestamp - self->vts);
+	printf("%lu", vtimestamp - self->vts);
 	self->vts = 0;
 }

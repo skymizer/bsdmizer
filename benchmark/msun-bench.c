@@ -30,7 +30,7 @@ double r[ARR_LEN];
     }
 
 
-#define TCALL(FNAME) printf("testing %s\n", #FNAME); test_##FNAME(20000)
+#define TCALL(FNAME) test_##FNAME(20000)
 
 // define benchmark functions
 
@@ -55,6 +55,7 @@ int main(int argc, char *argv[])
     {
       a[i] = rand() / (double) RAND_MAX;
       b[i] = rand() / (double) RAND_MAX;
+//      printf("%lf %lf\n", a[i], b[i]);
     }
 
     TCALL(pow);
