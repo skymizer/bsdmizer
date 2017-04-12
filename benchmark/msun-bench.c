@@ -59,8 +59,6 @@ int main(int argc, char *argv[])
 //      printf("%lf %lf\n", a[i], b[i]);
     }
 
-    printf("function: %s\n", argv[1]);
-
     if (argc < 2)
 	    printf("Usage: %s <function name>\n", argv[0]);
     else if (strcmp(argv[1], "pow") == 0)
