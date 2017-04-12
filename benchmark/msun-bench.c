@@ -6,6 +6,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 const long ARR_LEN = 1024;
 
@@ -58,20 +59,36 @@ int main(int argc, char *argv[])
 //      printf("%lf %lf\n", a[i], b[i]);
     }
 
-    TCALL(pow);
-    /*
-    TCALL(hypot);
-    TCALL(exp);
-    TCALL(log);
-    TCALL(log10);
-    TCALL(sin);
-    TCALL(cos);
-    TCALL(tan);
-    TCALL(asin);
-    TCALL(acos);
-    TCALL(atan);
-    TCALL(atan2);
-    */
+    printf("function: %s\n", argv[1]);
+
+    if (argc < 2)
+	    printf("Usage: %s <function name>\n", argv[0]);
+    else if (strcmp(argv[1], "pow") == 0)
+	    TCALL(pow);
+    else if (strcmp(argv[1], "hypot") == 0)
+	    TCALL(hypot);
+    else if (strcmp(argv[1], "exp") == 0)
+	    TCALL(exp);
+    else if (strcmp(argv[1], "log") == 0)
+	    TCALL(log);
+    else if (strcmp(argv[1], "log10") == 0)
+	    TCALL(log10);
+    else if (strcmp(argv[1], "sin") == 0)
+	    TCALL(sin);
+    else if (strcmp(argv[1], "cos") == 0)
+	    TCALL(cos);
+    else if (strcmp(argv[1], "tan") == 0)
+	    TCALL(tan);
+    else if (strcmp(argv[1], "asin") == 0)
+	    TCALL(asin);
+    else if (strcmp(argv[1], "acos") == 0)
+	    TCALL(acos);
+    else if (strcmp(argv[1], "atan") == 0)
+	    TCALL(atan);
+    else if (strcmp(argv[1], "atan2") == 0)
+	    TCALL(atan2);
+    else
+	    printf("Unknown function: %s\n", argv[1]);
 
     return 0;
 }
