@@ -4,7 +4,7 @@ ITERATION=5
 MEDIAN=$(((${ITERATION}+1)/2))
 
 R=""
-for i in `jot 5`; do
+for i in `jot ${ITERATION}`; do
 	T=`sudo dtrace -s msun-bench.d -c "./msun-bench $1" $1`
 	R="${R}${T}\n"
 done
