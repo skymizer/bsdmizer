@@ -10,13 +10,17 @@ export MAKEOBJDIRPREFIX=${BASEDIR}/obj
 MAKECONF=/dev/null
 SRCCONF=/dev/null
 
-JFLAG=$(sysctl -n kern.smp.cpus)
+JFACTOR=1
+JFLAG=$(($(sysctl -n kern.smp.cpus) * ${JFACTOR}))
 
 TARGET=amd64
 TARGET_ARCH=amd64
 KERNCONF=GENERIC
 
 cd ${SRCDIR}
+
+echo -n ">>> $0 starts at: "
+date
 
 make -j ${JFLAG} -DNO_CLEAN buildworld \
         TARGET=${TARGET} \
@@ -29,3 +33,5 @@ make -j ${JFLAG} -DNO_CLEAN buildkernel \
         KERNCONF=${KERNCONF} \
         __MAKE_CONF=${MAKECONF} \
         SRCCONF=${SRCCONF}
+echo -n ">>> $0 ends at: "
+date
