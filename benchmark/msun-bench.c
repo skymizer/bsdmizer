@@ -51,13 +51,24 @@ TFUN2(atan2)
 
 int main(int argc, char *argv[])
 {
+    FILE * f;
+    f = fopen("data","r");
+    if (NULL == f) {
+	    printf("file \"data\" not found\n");
+	    return 1;
+    }
     // initialize array contents
     for (int i = 0; i < ARR_LEN; ++i)
     {
+/*
       a[i] = rand() / (double) RAND_MAX;
       b[i] = rand() / (double) RAND_MAX;
+*/
+        fscanf(f, "%lf %lf", &(a[i]), &(b[i]));
 //      printf("%lf %lf\n", a[i], b[i]);
     }
+    fclose(f);
+    // don't care return :)
 
     if (argc < 2)
 	    printf("Usage: %s <function name>\n", argv[0]);
