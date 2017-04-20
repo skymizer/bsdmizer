@@ -8,5 +8,6 @@ SRCDIR=`realpath ../../../freebsd`
 
 JFLAG=$(sysctl -n kern.smp.cpus)
 
+export MAKEOBJDIRPREFIX=`realpath ./obj`
 cd ${SRCDIR}/lib/msun
 make cleandir
