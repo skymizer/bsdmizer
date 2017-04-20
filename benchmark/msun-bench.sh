@@ -1,5 +1,10 @@
 #!/bin/sh
 
+if [ $# -lt 1 ]; then
+	echo "Usage: $0 <function name>"
+	exit 1
+fi
+
 ITERATION=5
 MEDIAN=$(((${ITERATION}+1)/2))
 
