@@ -51,10 +51,15 @@ TFUN2(atan2)
 
 int main(int argc, char *argv[])
 {
+    if (argc < 3) {
+        printf("Usage: %s <function name> <data file>\n", argv[0]);
+	exit(1);
+    }
+
     FILE * f;
-    f = fopen("data","r");
+    f = fopen(argv[2],"r");
     if (NULL == f) {
-	    printf("file \"data\" not found\n");
+	    printf("file \"%s\" not found\n", argv[2]);
 	    return 1;
     }
     // initialize array contents
@@ -70,9 +75,7 @@ int main(int argc, char *argv[])
     fclose(f);
     // don't care return :)
 
-    if (argc < 2)
-	    printf("Usage: %s <function name>\n", argv[0]);
-    else if (strcmp(argv[1], "pow") == 0)
+    if (strcmp(argv[1], "pow") == 0)
 	    TCALL(pow);
     else if (strcmp(argv[1], "hypot") == 0)
 	    TCALL(hypot);
