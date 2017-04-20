@@ -1,6 +1,7 @@
 #!/bin/sh
 
-OPTIONS=$@
+#OPTIONS=$@
+OPTIONS=
 echo "CFLAGS=${OPTIONS}" > make.conf
 MAKECONF=`realpath make.conf`
 
