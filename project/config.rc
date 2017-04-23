@@ -170,13 +170,13 @@
     "workspace": {
         "source": "./source",
         "root": "./workspace",
-        "limit": 2
+        "limit": 8
     },
     "scripts": {
         "kill": {"path": "./source/kill.sh", "timeout": 5},
-        "run": {"path": "./source/run.sh", "timeout": 200},
+        "run": {"path": "./source/run.sh", "timeout": 10},
         "build": {"path": "./source/build.sh", "timeout": 60},
-        "clean": {"path": "./source/clean.sh", "timeout": 20}
+        "clean": {"path": "./source/clean.sh", "timeout": 30}
     },
     "log" : {
       "directory" : "./log",
