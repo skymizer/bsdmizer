@@ -8,7 +8,7 @@ fi
 _BINPATH=`realpath $0`
 BINDIR=`dirname ${_BINPATH}`
 
-ITERATION=5
+ITERATION=3
 MEDIAN=$(((${ITERATION}+1)/2))
 
 R=""
