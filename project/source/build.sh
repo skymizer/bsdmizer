@@ -28,9 +28,9 @@ MAKE="make \
 OBJDIR="`pwd`/obj"
 export MAKEOBJDIRPREFIX=${OBJDIR}
 
-cd ${SRCDIR}/lib/libnetbsd
-${MAKE} obj
-${MAKE} all
+#cd ${SRCDIR}/lib/libnetbsd
+#${MAKE} obj
+#${MAKE} all
 
 cd ${SRCDIR}/lib/msun
 ${MAKE} obj
