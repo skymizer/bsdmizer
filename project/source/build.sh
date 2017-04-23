@@ -11,6 +11,7 @@ SRCDIR=`realpath ../../../freebsd`
 CROSS_BINUTILS_PREFIX=/usr/local/x86_64-freebsd/bin/
 MAKE="make \
 	-D WITHOUT_MAN \
+	-D WITHOUT_DEBUG_FILES \
 	__MAKE_CONF=${MAKECONF} \
 	CC=/usr/local/bin/x86_64-unknown-freebsd11.0-gcc \
 	CXX=/usr/local/bin/x86_64-unknown-freebsd11.0-g++ \
