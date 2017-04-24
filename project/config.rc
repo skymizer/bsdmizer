@@ -123,7 +123,7 @@
             "fsel-sched-reschedule-pipelined",
             "fselective-scheduling",
             "fselective-scheduling2",
-            "fshort-double",
+            "fshort-enums",
             "fshort-wchar",
             "fsignaling-nans",
             "fsingle-precision-constant",
