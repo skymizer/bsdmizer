@@ -11,4 +11,4 @@ cd -
 #cd ${SRCDIR}/lib/msun/tests
 #env LD_PRELOAD=${OBJDIR}/libm.so.5 kyua test
 
-../../../benchmark/msun-bench.sh pow ${LIBPATH}/libm.so.5
+../../../benchmark/msun-bench.sh exp ${LIBPATH}/libm.so.5
