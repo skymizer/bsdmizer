@@ -1,6 +1,6 @@
 Abstract
 --------
-We propose a framework, bsdmizer, to continuously improve FreeBSD performance.
+We propose a framework, bsdmizer [1], to continuously improve FreeBSD performance.
 It leverages existing building and testing infrastructure to drive compilers trying variant flag sequences, and leads to optimal release image.
 As more time we invest, the image continuously becomes better and better, in execution time or in code size, depending on the direction of performance test cases.
 We have already accelerated math library to XX%, and we will soon apply bsdmizer on the other critical libraries and kernel esp. network part.
@@ -22,3 +22,5 @@ Related Work
 
 Current Status
 --------------
+
+[1] https://github.com/skymizer/bsdmizer
