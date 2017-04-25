@@ -1,6 +1,6 @@
 #!/bin/sh
 
-SVN_REVISION=316730
+SVN_REVISION=317402
 SRCDIR=freebsd
 
 JFLAG=$(sysctl -n kern.smp.cpus)
