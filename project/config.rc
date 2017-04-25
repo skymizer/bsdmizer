@@ -170,7 +170,7 @@
     "workspace": {
         "source": "./source",
         "root": "./workspace",
-        "limit": 8
+        "limit": 4
     },
     "scripts": {
         "kill": {"path": "./source/kill.sh", "timeout": 5},
