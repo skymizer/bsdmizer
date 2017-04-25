@@ -16,9 +16,10 @@ cd ${SRCDIR}/lib/libbz2
 BZIP2_LIBDIR=`make -V CANONICALOBJDIR`
 cd -
 
+cp ../../../benchmark/bzip2/data ./
 R=""
 for i in `jot ${ITERATION}`; do
-	T=`sudo LD_PRELOAD=${BZIP2_LIBDIR}/libbz2.so.4 dtrace -s bzip2-bench.d -c "${BZIP2_BINDIR}/bzip2 -k -9 ../../../benchmark/bzip2/data"`
+	T=`sudo LD_PRELOAD=${BZIP2_LIBDIR}/libbz2.so.4 dtrace -s bzip2-bench.d -c "${BZIP2_BINDIR}/bzip2 -k -9 ./data"`
 	diff ../../../benchmark/bzip2/data.bz2.orig data.bz2
 	if [ $? -ne 0 ]; then
 		exit 1
@@ -26,5 +27,6 @@ for i in `jot ${ITERATION}`; do
 	rm -f data.bz2
 	R="${R}${T}\n"
 done
+rm -f ./data
 
 printf "${R}" | sort -n | head -n ${MEDIAN} | tail -n 1
