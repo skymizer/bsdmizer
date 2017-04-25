@@ -166,7 +166,7 @@
     "workspace": {
         "source": "./source",
         "root": "./workspace",
-        "limit": 4
+        "limit": 8
     },
     "scripts": {
         "kill": {"path": "./source/kill.sh", "timeout": 5},
