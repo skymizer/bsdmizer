@@ -19,7 +19,6 @@ cd -
 R=""
 for i in `jot ${ITERATION}`; do
 	T=`sudo LD_PRELOAD=${BZIP2_LIBDIR}/libbz2.so.4 dtrace -s bzip2-bench.d -c "${BZIP2_BINDIR}/bzip2 -k -9 data"`
-	#T=`sudo dtrace -s bzip2-bench.d -c "${BZIP2_BINDIR}/bzip2 -k -9 data"`
 	diff data.bz2.orig data.bz2
 	if [ $? -ne 0 ]; then
 		exit 1
