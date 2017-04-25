@@ -28,6 +28,10 @@ MAKE="make \
 OBJDIR="`pwd`/obj"
 export MAKEOBJDIRPREFIX=${OBJDIR}
 
+cd ${SRCDIR}/lib/libbz2
+${MAKE} obj
+${MAKE} all
+
 cd ${SRCDIR}/usr.bin/bzip2
 ${MAKE} obj
 ${MAKE} all
