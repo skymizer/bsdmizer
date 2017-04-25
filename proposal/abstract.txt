@@ -1,11 +1,11 @@
 Abstract
 --------
 We propose a framwork, bsdmizer, to continuously improve FreeBSD performance.
-It leverages existing building and testing infrastructure to drive compilers trying variant flag sequeices, and leads to optimal release image.
+It leverages existing building and testing infrastructures to drive compilers trying variant flag sequeices, and leads to optimal release image.
 As more time we invest, the image continuously becomes better and better, in execution time or in code size, depending on the direction of performance test cases.
 We have already accelerated math library to XX%, and we will soon apply bsdmizer on the other critical libraries and kernel esp. network part.
 The resulting optimal compilation flag sequences will be avaiable as a source build option.
-In our imagation, bsdmizer will create a new development cycle:
+In our imagination, bsdmizer will create a new development cycle:
 Heroes write performance test cases first, bsdmizer feedbacks effective compiler flag sequences, and then all people gain performance improvement at the happy end.
 
 Motivation
