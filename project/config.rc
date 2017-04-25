@@ -127,7 +127,6 @@
             "fshort-wchar",
             "fsignaling-nans",
             "fsingle-precision-constant",
-            "fstrict-enums",
             "ftrapv",
             "ftree-coalesce-inlined-vars",
             "ftree-loop-distribute-patterns",
