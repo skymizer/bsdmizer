@@ -1,7 +1,6 @@
 #!/bin/sh
 
-ITERATION=3
-MEDIAN=$(((${ITERATION}+1)/2))
+TARGET=$1
 
 SRCDIR=`realpath ../../../freebsd`
 
@@ -16,17 +15,9 @@ cd ${SRCDIR}/lib/libbz2
 BZIP2_LIBDIR=`make -V CANONICALOBJDIR`
 cd -
 
-cp ../../../benchmark/bzip2/data ./
-R=""
-for i in `jot ${ITERATION}`; do
-	T=`sudo LD_PRELOAD=${BZIP2_LIBDIR}/libbz2.so.4 dtrace -s bzip2-bench.d -c "${BZIP2_BINDIR}/bzip2 -k -9 ./data"`
-	diff ../../../benchmark/bzip2/data.bz2.orig data.bz2
-	if [ $? -ne 0 ]; then
-		exit 1
-	fi
-	rm -f data.bz2
-	R="${R}${T}\n"
+for i in "${BZIP2_LIBDIR}/libbz2.so.4 ${BZIP2_BINDIR}/bzip2 test.sh bzip2-bench.d"
+do
+	scp $i bsdmizer-2:~/workspace-bzip2
 done
-rm -f ./data
 
-printf "${R}" | sort -n | head -n ${MEDIAN} | tail -n 1
+ssh bsdmizer-2 "cd ~/workspace-bzip2; ./test.sh"
