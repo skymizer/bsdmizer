@@ -159,7 +159,7 @@
             "device": {
                 "portal": "localhost",
                 "type": "device",
-                "connect": [{"host": "localhost", "type": "ssh"}],
+                "connect": [{"host": "10.0.2.2", "type": "ssh"}],
                 "quadruple": "arm-*-linux-androideabi"
             }
         }
