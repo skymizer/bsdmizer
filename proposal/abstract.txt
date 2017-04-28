@@ -3,7 +3,7 @@ Abstract
 We propose a framework, bsdmizer [1], to continuously improve FreeBSD performance.
 It leverages existing building and testing infrastructure, along with DTrace to drive compilers trying variant flag sequences, and leads to optimal release image.
 As more time we invest, the image continuously becomes better and better, in execution time or in code size, depending on the direction of performance test cases.
-We have already accelerated /usr/bin/bzip2 to 35%, and we will soon apply bsdmizer on the other critical libraries and kernel esp. network part.
+We have already accelerated /usr/bin/bzip2 to 35%, and we will soon apply bsdmizer on the other critical libraries and kernel, esp. network part.
 The resulting optimal compilation flag sequences will be available as a source build option.
 In our imagination, bsdmizer will create a new development cycle:
 Heroes write performance test cases first, bsdmizer feedbacks effective compiler flag sequences, and then all people gain performance improvement at the happy end.
